@@ -14,7 +14,7 @@ def main(args):
     model = nonlinear.NotearsMLP(dims=[d, args.hidden, 1], bias=True)
     W_est = nonlinear.notears_nonlinear(model, X, lambda1=args.lambda1, lambda2=args.lambda2)
     assert utils.is_dag(W_est)
-    np.savetxt(args.W_path, W_est, delimiter=',')
+    #np.savetxt(args.W_path, W_est, delimiter=',')
 
 
 def parse_args():
